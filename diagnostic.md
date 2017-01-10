@@ -6,21 +6,21 @@ Record your responses inside the fenced code blocks below each question.
     and what are the main task(s) you perform inside an Ember Route?
 
     ```md
-    <!-- your response here -->
+    You define all of the views/urls in the router. The main tasks you perorm in an ember route is either defining the data, applying data hooks and defining actions
     ```
 
 1.  What is the command to generate a route named `boston` nested under
     `campus`?
 
     ```md
-    <!-- your response here -->
+    ember g route campus/boston
     ```
 
 1.  Suppose you have a nested route at the URL `/campus/boston`. How would you
     use the `link-to` helper to generate an appropriate link?
 
     ```md
-    <!-- your response here -->
+  {{#link-to 'campus.boston'}}Boston{{/link-to}}
     ```
 
 1.  Explain **at least** two differences between the following two route
@@ -35,7 +35,8 @@ Record your responses inside the fenced code blocks below each question.
     ```
 
     ```md
-    <!-- your response here -->
+    The second route is a 'nested route.' The first route would show a single product where as
+    the second route would most likely show a list of products.
     ```
 
 1.  Suppose we have the following route definition:
@@ -48,11 +49,17 @@ Record your responses inside the fenced code blocks below each question.
     value `'123'` inside a Route?
 
     ```md
-    <!-- your response here -->
+    I dont really understand this one...the value of 123 is referenced inside that route.
     ```
 
 1.  Inside a template, how do we reference data provided by a Route?
 
     ```md
-    <!-- your response here -->
+    By first referencing the appropriate model and second assigning it to a variable most likely called the same thing. For example:
+
+    {{#each model as |list|}}
+        {{listr-list/card list=list}}
+      {{/each}}
+
+      We're defining the model as list and saying we want the listr-list/card data. Then assigning the left list the value of the right list.
     ```
